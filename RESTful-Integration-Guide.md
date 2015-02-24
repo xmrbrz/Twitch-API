@@ -28,7 +28,7 @@ You should only use this in the case that you cannot use the Javascript SDK for 
       'password' => 'PASSWORD'
   );
 
-  $result = post_url_contents("https://api.twitch.tv/kraken/oauth2/token", $login_params);
+  $result = post_url_contents("https://api.twitch.tv/kraken/oauth2/authorize", $login_params);
   $access_result = json_decode($result);
   echo $access_result->access_token;
 ```
